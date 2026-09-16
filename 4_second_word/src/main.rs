@@ -8,13 +8,11 @@ fn second_word(s: &str) -> &str {
     for (i, &iter) in stringus.iter().enumerate() {
         if started == false && iter != b' ' {
             started = true;
-        }
-        else if started == true {
+        } else if started == true {
             if iter == b' ' {
                 if first_space == 0 {
-                    first_space = i+1;
-                }
-                else {
+                    first_space = i + 1;
+                } else {
                     return &s[first_space..i];
                 }
             }
@@ -23,7 +21,7 @@ fn second_word(s: &str) -> &str {
     "Input contains only one word!"
 }
 
-fn main(){
+fn main() {
     println!("Enter your input:");
 
     let mut input = String::new();
