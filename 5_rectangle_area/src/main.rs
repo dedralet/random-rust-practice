@@ -1,13 +1,12 @@
-fn area_of_rectangle(height: u32, width: u32) -> u32 {
-    height * width
+fn area_of_rectangle(lengths: (u32, u32)) -> u32 {
+    lengths.0 * lengths.1
 }
 
 fn main() {
-    let height = 40;
-    let width = 20;
+    let rectangle: (u32, u32) = (40, 20);
 
     println!(
         "Area of the rectangle is equal to {}",
-        area_of_rectangle(height, width)
+        area_of_rectangle(rectangle)
     );
 }
