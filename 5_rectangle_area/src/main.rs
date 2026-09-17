@@ -13,8 +13,5 @@ fn main() {
         width: 20,
     };
 
-    println!(
-        "Area of the rectangle is equal to {}",
-        area(&rectangle)
-    );
+    println!("Area of the rectangle is equal to {}", area(&rectangle));
 }
