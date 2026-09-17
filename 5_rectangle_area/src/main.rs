@@ -3,8 +3,10 @@ struct Rectangle {
     width: u32,
 }
 
-fn area(rectangle: &Rectangle) -> u32 {
-    rectangle.height * rectangle.width
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.height * self.width
+    }
 }
 
 fn main() {
@@ -13,5 +15,5 @@ fn main() {
         width: 20,
     };
 
-    println!("Area of the rectangle is equal to {}", area(&rectangle));
+    println!("Area of the rectangle is equal to {}", rectangle.area());
 }
