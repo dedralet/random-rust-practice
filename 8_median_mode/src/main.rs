@@ -3,7 +3,7 @@ use std::collections::HashMap;
 fn median_finder(mut list: Vec<i64>) -> i64 {
     list.sort();
 
-    list[list.len()/2]
+    list[list.len() / 2]
 }
 
 fn mode_finder(list: &Vec<i64>) -> Option<i64> {
@@ -28,9 +28,11 @@ fn mode_finder(list: &Vec<i64>) -> Option<i64> {
 }
 
 fn main() {
-    let list: Vec<i64> = vec![-4, 7, 1, -3, 8, -1, 6, 2, -9, 4, 1, -2, 9, 1, -6, 7, -1, 41, -3];
+    let list: Vec<i64> = vec![
+        -4, 7, 1, -3, 8, -1, 6, 2, -9, 4, 1, -2, 9, 1, -6, 7, -1, 41, -3,
+    ];
 
-    println! ("The list consists of these numbers:");
+    println!("The list consists of these numbers:");
     print!("[ ");
     for i in &list {
         print!("{}, ", i);
